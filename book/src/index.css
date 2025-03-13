@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    scroll-behavior: smooth;
+    user-select: none;
+}
+.img {
+    transform: translate(50rem,-18rem);
+    height: 30rem;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#featured {
+    transform: translate(0rem,-12rem);
+}
+#button {
+    font-size: x-large;
+}
+.title3 {
+    transform: translate(43rem,-67rem);
+}
+.para3 {
+    transform: translate(43rem,-65rem);
+}
+.ilyas {
+    transform: translate(44rem,-61rem);
+}
+.post {
+    transform: translate(44rem,-59rem);
+}
+hr {
+    width: 10rem;
+}
+.icons {
+    transform: translate(44rem,-57rem);
+}
+/*Books*/
+
+@media screen and (max-width: 768px) {
+    .img {
+        transform: translate(-5rem,10rem);
+        height: 30rem;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    #featured {
+        transform: translate(0rem,10rem);
+    }
+    .class1 {
+        transform: translateX(-10rem);
+    }
+    #img5 {
+        transform: translateX(-10rem);
+    }
+   
+}
