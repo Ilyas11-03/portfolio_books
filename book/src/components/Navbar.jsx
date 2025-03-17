@@ -5,6 +5,7 @@ import { Account } from 'appwrite'; // Importez le SDK Appwrite
 import toast from 'react-hot-toast';
 import { FaSignOutAlt } from 'react-icons/fa';
 
+
 //Initialize AppWrite client
 const client = new Client()
   .setEndpoint('https://cloud.appwrite.io/v1')
