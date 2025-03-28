@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Account } from 'appwrite'; // Importez le SDK Appwrite
 import toast from 'react-hot-toast';
@@ -14,6 +14,8 @@ const client = new Client()
 //Initialize AppWrite account
 const account = new Account(client);
 
+const navigate = useNavigate(); // Hook pour naviguer vers une autre page ou bien un composant
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,8 +27,10 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await account.deleteSession('current')
+      localStorage.removeItem('token')
       toast.success('LogOut succesfull!!')
       console.log('Successfully logged out')
+      navigate('/login')
     } catch (error){
       console.error('Error logging out:', error);
       toast.error('Error loggin out')
