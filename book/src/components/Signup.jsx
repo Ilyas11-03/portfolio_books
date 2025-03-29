@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+
 // Import des SDK Appwrite
 import { Client, Account } from "appwrite";
 

@@ -14,10 +14,11 @@ const client = new Client()
 //Initialize AppWrite account
 const account = new Account(client);
 
-const navigate = useNavigate(); // Hook pour naviguer vers une autre page ou bien un composant
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate(); // Hook pour naviguer vers une autre page ou bien un composant
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -27,9 +28,9 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await account.deleteSession('current')
-      localStorage.removeItem('token')
-      toast.success('LogOut succesfull!!')
+      // localStorage.removeItem('token')
       console.log('Successfully logged out')
+      toast.success('LogOut succesfull!!')
       navigate('/login')
     } catch (error){
       console.error('Error logging out:', error);
